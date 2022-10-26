@@ -1,0 +1,160 @@
+:root {
+    --main-title-color: #FFFFFF;
+    --secondary-title-color: #303030;
+    --main-btn-color: #FFFFFF;
+    --background-color: #E5E5E5;
+    --accent-color: #FF6C00;
+    --secondary-background-color: #191C26;
+    --secondary-text-color: #9DA4BD;
+}
+body {
+    font-family: 'Open Sans', 'Verdana', sans-serif;
+}
+/* Reset starts */
+h1,h2,h3,h4,h5,h6, p {
+    margin: 0;
+}
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.link {
+    text-decoration: none;
+    font-style: normal;
+    color: currentColor;
+} /* Reset ends */
+.button {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* HEADER */
+.header {
+    background-color: #575757;
+}
+.nav-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--main-title-color);
+}
+.nav-link:hover, .nav-link:focus {
+    color: var(--accent-color);
+}
+.header-tel {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+}
+.header-btn {
+    color: var(--main-btn-color);
+    background-color: transparent;
+    border: 1px solid var(--main-btn-color);
+}
+.header-btn:hover, .header-btn:focus {
+    color: var(--accent-color);
+}
+/* HERO */
+.hero {
+    background-color: #575757;
+}
+.hero-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.365px;
+    letter-spacing: 0.2em;
+    color: var(--secondary-title-color);
+}
+.hero-link:hover, .hero-link:focus {
+    color: var(--accent-color);
+}
+.hero-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.6);
+}
+.hero-title {
+    font-family: 'Raleway',sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+    color: var(--main-title-color);
+}
+.hero-descriprion {
+    font-size: 18px;
+    line-height: 1.66;   
+    letter-spacing: 0.02em;
+    color:  var(--secondary-text-color);
+}
+/* ABOUT */
+.about-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    color: var(--secondary-title-color);
+}
+.about-sub-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color:  var(--secondary-title-color);
+}
+.about-description {
+    font-size: 18px;
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    color: #555555;
+}
+.about-text {
+    font-size: 14px;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    color: #555555;
+    }
+.about-btn {
+    color: var(--secondary-title-color);
+    border: 1px solid var(--main-btn-color);
+}
+.about-btn:hover, .about-btn:focus {
+    border-color: var(--accent-color);
+}
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+.booking-section, .address-section {
+    background-color: var(--secondary-background-color);
+}
+.footer-link {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.365px;
+    letter-spacing: 0.2em;
+    color: var(--secondary-title-color);
+}
+.footer-link:hover, .footer-link:focus {
+    color: var(--accent-color);
+}
