@@ -5,7 +5,10 @@
     --background-color: #E5E5E5;
     --accent-color: #FF6C00;
     --secondary-background-color: #191C26;
+    --text-color: #555555;
     --secondary-text-color: #9DA4BD;
+    --section-secondary-bcg-color: #F7F7F7;
+    --section-text-opacity: rgba(157, 164, 189, 0.6);
 }
 body {
     font-family: 'Open Sans', 'Verdana', sans-serif;
@@ -13,6 +16,9 @@ body {
 /* Reset starts */
 h1,h2,h3,h4,h5,h6, p {
     margin: 0;
+}
+img {
+    display: block;
 }
 .list {
     list-style: none;
@@ -33,9 +39,9 @@ h1,h2,h3,h4,h5,h6, p {
     text-transform: uppercase;
     cursor: pointer;
 }
-/* HEADER */
-.header {
-    background-color: #575757;
+/* HEADER change color to background picture*/
+.header { 
+    background-color: #575757; 
 }
 .nav-link {
     font-weight: 600;
@@ -55,13 +61,14 @@ h1,h2,h3,h4,h5,h6, p {
     text-transform: uppercase;
     color: var(--main-title-color);
 }
-.header-btn {
+.header-dark-btn {
     color: var(--main-btn-color);
     background-color: transparent;
     border: 1px solid var(--main-btn-color);
 }
-.header-btn:hover, .header-btn:focus {
-    color: var(--accent-color);
+.header-dark-btn:hover, .header-dark-btn:focus {
+    background-color: var(--accent-color);
+    border: transparent;
 }
 /* HERO */
 .hero {
@@ -77,12 +84,12 @@ h1,h2,h3,h4,h5,h6, p {
 .hero-link:hover, .hero-link:focus {
     color: var(--accent-color);
 }
-.hero-text {
+.hero-text, .price-description {
     font-weight: 600;
     font-size: 11px;
     line-height: 1.36;
     text-transform: uppercase;
-    color: rgba(157, 164, 189, 0.6);
+    color: var(--section-text-opacity);
 }
 .hero-title {
     font-family: 'Raleway',sans-serif;
@@ -118,20 +125,42 @@ h1,h2,h3,h4,h5,h6, p {
     font-size: 18px;
     line-height: 1.66;
     letter-spacing: 0.02em;
-    color: #555555;
+    color: var(--text-color);
 }
 .about-text {
     font-size: 14px;
     line-height: 1.85;
     letter-spacing: 0.02em;
-    color: #555555;
+    color: var(--text-color);
     }
-.about-btn {
+.about-light-btn {
     color: var(--secondary-title-color);
-    border: 1px solid var(--main-btn-color);
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
 }
-.about-btn:hover, .about-btn:focus {
-    border-color: var(--accent-color);
+.about-light-btn:hover, .about-light-btn:focus {
+    color: var(--main-btn-color);
+    background-color: var(--accent-color);
+    border-color: transparent;
+}
+.price-section {
+    background-color: var(--secondary-background-color);
+}
+.price-title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color: var(--main-title-color)
+}
+.price-list-item {
+    font-size: 18px;
+    line-height: 1.66;   
+    letter-spacing: 0.02em;
+    color:  var(--secondary-text-color);
+}
+.team-section {
+    background-color: var(--section-secondary-bcg-color);
 }
 .visually-hidden {
     position: absolute;
