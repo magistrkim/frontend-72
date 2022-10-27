@@ -12,6 +12,7 @@
 }
 body {
     font-family: 'Open Sans', 'Verdana', sans-serif;
+    margin: 0;
 }
 /* Reset starts */
 h1,h2,h3,h4,h5,h6, p {
@@ -147,6 +148,7 @@ img {
     background-color: var(--secondary-background-color);
 }
 .price-title {
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 42px;
     line-height: 1.16;
@@ -159,8 +161,59 @@ img {
     letter-spacing: 0.02em;
     color:  var(--secondary-text-color);
 }
+.benefits-title, .team-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color: var(--secondary-title-color);
+}
+.benefits-item-item {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color: var(--secondary-title-color);
+}
+.benefits-item-text {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-align: center;
+    color: var(--secondary-title-color);
+}
+.benefits-description, 
+.team-description, 
+.gallery-description {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    color: var(--secondary-title-color);
+}
+.benefits-text {
+font-size: 18px;
+line-height: 1.66;
+letter-spacing: 0.02em;
+color: var(--text-color);
+}
 .team-section {
     background-color: var(--section-secondary-bcg-color);
+}
+.team-sub-title {
+    font-size: 18px;
+    line-height: 1.38;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color:  var(--secondary-title-color);
+}
+.team-text {
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
 }
 .visually-hidden {
     position: absolute;
@@ -177,12 +230,55 @@ img {
 .booking-section, .address-section {
     background-color: var(--secondary-background-color);
 }
+.booking-title,
+.address-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    color: var(--main-title-color);
+}
+.address-link {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.66;   
+    letter-spacing: 0.02em;
+    color:  var(--secondary-text-color);
+}
+.address-tel, .address-mail,
+.schedule-text {
+    font-size: 18px;
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+}
+
+.address-link:hover, .address-link:focus,
+.address-tel:hover, .address-tel:focus,
+.address-mail:hover, .address-mail:focus {
+    color: var(--accent-color);
+}
+.schedule-sub-title {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+}
 .footer-link {
     font-weight: 600;
     font-size: 11px;
-    line-height: 1.365px;
+    line-height: 1.36px;
     letter-spacing: 0.2em;
     color: var(--secondary-title-color);
+}
+.footer-copyright {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    color: var(--secondary-text-color);
 }
 .footer-link:hover, .footer-link:focus {
     color: var(--accent-color);
