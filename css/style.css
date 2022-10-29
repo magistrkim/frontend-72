@@ -9,6 +9,8 @@
     --secondary-text-color: #9DA4BD;
     --section-secondary-bcg-color: #F7F7F7;
     --section-text-opacity: rgba(157, 164, 189, 0.6);
+    --indent: 30px;
+    --items: 3;
 }
 body {
     font-family: 'Open Sans', 'Verdana', sans-serif;
@@ -31,6 +33,21 @@ img {
     font-style: normal;
     color: currentColor;
 } /* Reset ends */
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    outline: 1px solid tomato;
+}
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    outline: 1px solid teal;
+}
 .button {
     font-family: inherit;
     font-weight: 600;
@@ -39,12 +56,43 @@ img {
     letter-spacing: 0.09em;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 25px;
+    padding: 11px 19px;
+    min-width: 160px;
+    min-height: 40px;
+}
+/*CARD-SET*/
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
+}
+.card-set-item {
+    flex-basis: calc ((100%-var(--indent) * (var(--items)-1)) / (var(--items)));
 }
 /* HEADER change color to background picture*/
+.header-container {
+    display: flex;
+    align-items: center;
+}
 .header { 
     background-color: #575757; 
 }
+.logo {
+    margin-right: 132px;
+}
+.header-nav {
+    margin-right: auto;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 .nav-link {
+    display: block;
+    padding-top: 52px;
+    padding-bottom: 52px;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
@@ -53,6 +101,11 @@ img {
 }
 .nav-link:hover, .nav-link:focus {
     color: var(--accent-color);
+}
+.header-address {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 .header-tel {
     font-weight: 600;
@@ -65,7 +118,7 @@ img {
 .header-dark-btn {
     color: var(--main-btn-color);
     background-color: transparent;
-    border: 1px solid var(--main-btn-color);
+    border: 1px solid var(--accent-color);
 }
 .header-dark-btn:hover, .header-dark-btn:focus {
     background-color: var(--accent-color);
@@ -85,6 +138,9 @@ img {
 .hero-link:hover, .hero-link:focus {
     color: var(--accent-color);
 }
+.uppertitle {
+    margin-bottom: 20px;
+}
 .hero-text, .price-description {
     font-weight: 600;
     font-size: 11px;
@@ -99,14 +155,29 @@ img {
     line-height: 1.18;
     letter-spacing: 0.05em;
     color: var(--main-title-color);
+    margin-bottom: 20px;
 }
 .hero-descriprion {
     font-size: 18px;
     line-height: 1.66;   
     letter-spacing: 0.02em;
     color:  var(--secondary-text-color);
+    width: 360px;
 }
 /* ABOUT */
+.about-container {
+    display: flex;
+}
+.about-list {
+    display: flex;
+    margin-right: 30px;
+}
+.about-item:not(:last-child) {
+    margin-right: 30px;
+}
+.about-right-side {
+    width: 470px;
+}
 .about-title {
     font-weight: 600;
     font-size: 11px;
@@ -121,18 +192,21 @@ img {
     line-height: 1.16;
     letter-spacing: 0.05em;
     color:  var(--secondary-title-color);
+    margin-bottom: 20px;
 }
 .about-description {
     font-size: 18px;
     line-height: 1.66;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    margin-bottom: 20px;
 }
 .about-text {
     font-size: 14px;
     line-height: 1.85;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    margin-bottom: 42px;
     }
 .about-light-btn {
     color: var(--secondary-title-color);
@@ -144,8 +218,38 @@ img {
     background-color: var(--accent-color);
     border-color: transparent;
 }
+/* PRICE */
 .price-section {
     background-color: var(--secondary-background-color);
+}
+.price-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+.price-list {
+    flex-basis: 570px;
+    padding: 30px 20px;
+    outline: 1px solid white;
+}
+.price-list-item {
+    display: flex;
+    align-items: baseline;
+    font-size: 18px;
+    line-height: 1.66;   
+    letter-spacing: 0.02em;
+    color:  var(--secondary-text-color);
+}
+.price-list-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.line {
+    display: block;
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(157, 164, 189, 0.12);
+    margin-left: 12px;
+    margin-right: 12px;
 }
 .price-title {
     font-family: 'Raleway', sans-serif;
@@ -153,14 +257,14 @@ img {
     font-size: 42px;
     line-height: 1.16;
     letter-spacing: 0.05em;
-    color: var(--main-title-color)
+    color: var(--main-title-color);
+    margin-bottom: 44px;
 }
-.price-list-item {
-    font-size: 18px;
-    line-height: 1.66;   
-    letter-spacing: 0.02em;
-    color:  var(--secondary-text-color);
+.button-price {
+    display: block;
+    margin: 0 auto;
 }
+/* BENEFITS */
 .benefits-title, .team-title {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -168,6 +272,10 @@ img {
     line-height: 1.16;
     letter-spacing: 0.05em;
     color: var(--secondary-title-color);
+}
+.benefits-title {
+    width: 430px;
+    margin-bottom: 20px;
 }
 .benefits-item-item {
     font-weight: 700;
@@ -193,13 +301,18 @@ img {
     color: var(--secondary-title-color);
 }
 .benefits-text {
-font-size: 18px;
-line-height: 1.66;
-letter-spacing: 0.02em;
-color: var(--text-color);
+    width: 500px;
+    font-size: 18px;
+    line-height: 1.66;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
 }
+/* TEAM */
 .team-section {
     background-color: var(--section-secondary-bcg-color);
+}
+.team-title {
+    margin-bottom: 44px;
 }
 .team-sub-title {
     font-size: 18px;
@@ -207,6 +320,11 @@ color: var(--text-color);
     text-align: center;
     letter-spacing: 0.02em;
     color:  var(--secondary-title-color);
+    margin-bottom: 8px;
+}
+.team-wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .team-text {
     font-size: 14px;
@@ -214,6 +332,13 @@ color: var(--text-color);
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+}
+/* GALLERY */
+.gallery-description {
+    margin-bottom: 45px;
+}
+.gallery-list {
+    --items: 4;
 }
 .visually-hidden {
     position: absolute;
@@ -227,6 +352,7 @@ color: var(--text-color);
     clip-path: inset(50%);
     margin: -1px;
 }
+/* BOOKING */
 .booking-section, .address-section {
     background-color: var(--secondary-background-color);
 }
@@ -238,6 +364,13 @@ color: var(--text-color);
     line-height: 1.16;
     letter-spacing: 0.05em;
     color: var(--main-title-color);
+}
+/* ADDRESS */
+.address-title {
+    margin-bottom: 40px;
+}
+.address-container {
+    margin-bottom: 70px;
 }
 .address-link {
     font-weight: 700;
@@ -265,7 +398,9 @@ color: var(--text-color);
     line-height: 1.36;
     text-transform: uppercase;
     color: var(--main-title-color);
+    margin-bottom: 20px;
 }
+/* FOOTER */
 .footer-link {
     font-weight: 600;
     font-size: 11px;
