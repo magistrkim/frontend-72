@@ -81,6 +81,9 @@ img {
 .logo {
     margin-right: 132px;
 }
+.header-logo {
+    fill: #303030;
+}
 .header-nav {
     margin-right: auto;
 }
@@ -359,6 +362,29 @@ img {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+    margin-bottom: 30px;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--secondary-title-color);
+    background-color: var(--main-btn-color);
+}
+.socials-link:hover, .socials-link:focus {
+    color: var(--accent-color);
+}
+.social-icons {
+    fill: currentColor;
 }
 /* GALLERY */
 .gallery-description {
@@ -408,6 +434,9 @@ img {
     color: var(--main-title-color);
 }
 /* ADDRESS */
+.address-wrapper {
+    margin-bottom: 70px;
+}
 .address-title {
     margin-bottom: 40px;
 }
@@ -415,11 +444,15 @@ img {
     margin-bottom: 70px;
 }
 .address-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.66;   
     letter-spacing: 0.02em;
     color:  var(--secondary-text-color);
+    margin-bottom: 20px;
 }
 .address-tel, .address-mail,
 .schedule-text {
@@ -428,11 +461,13 @@ img {
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
 }
-
-.address-link:hover, .address-link:focus,
-.address-tel:hover, .address-tel:focus,
-.address-mail:hover, .address-mail:focus {
-    color: var(--accent-color);
+.address-tel {
+    margin-bottom: 20px;
+}
+.address-tel, .address-mail {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 .schedule-sub-title {
     font-weight: 600;
