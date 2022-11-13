@@ -128,6 +128,30 @@ img {
 .nav-link:hover, .nav-link:focus {
     color: var(--accent-color);
 }
+.header-nav-link {
+    position: relative;
+}
+.header-nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translateX(-50%) scale(0.3);
+    display: block;
+    width: 90%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+.header-nav-link:hover::after,
+.header-nav-link:focus::after {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
 .header-address {
     display: flex;
     align-items: center;
@@ -207,6 +231,9 @@ img {
     text-transform: uppercase;
     color: var(--section-text-opacity);
 }
+.hero-text {
+    animation: top-to-bottom 1000ms ease 200ms both;
+}
 .hero-title {
     font-family: 'Raleway',sans-serif;
     font-weight: 700;
@@ -215,6 +242,7 @@ img {
     letter-spacing: 0.05em;
     color: var(--main-title-color);
     margin-bottom: 20px;
+    animation: left-to-right 1200ms ease 1200ms both;
 }
 .hero-descriprion {
     font-size: 18px;
@@ -222,6 +250,7 @@ img {
     letter-spacing: 0.02em;
     color:  var(--secondary-text-color);
     width: 360px;
+    animation: bottom-to-top 1000ms ease 2400ms both;
 }
 .slider-pagination {
     position: absolute;
@@ -660,4 +689,43 @@ img {
 }
 .footer-link:hover, .footer-link:focus {
     color: var(--accent-color);
+}
+@keyframes top-to-bottom {
+    0% {
+    opacity: 0;
+    transform: translateY(-100px);
+    }
+    50% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+@keyframes bottom-to-top {
+    0% {
+    opacity: 0;
+    transform: translateY(150px);
+    }
+    50% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+@keyframes left-to-right {
+    0% {
+    opacity: 0;
+    transform: translateX(-250px);
+    }
+    50% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
 }
