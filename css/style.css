@@ -173,6 +173,7 @@ img {
     transition-property: background-color;
     transition-duration: 500ms;
     transition-timing-function: ease;
+    animation: heartbeat 4500ms ease-in-out infinite both;
 }
 .header-dark-btn:hover, .header-dark-btn:focus {
     background-color: var(--accent-color);
@@ -355,6 +356,7 @@ img {
     transition-property: background-color, color;
     transition-duration: 500ms;
     transition-timing-function: ease;
+    animation: heartbeat 4500ms ease-in-out infinite both;
 }
 .about-light-btn:hover, .about-light-btn:focus {
     color: var(--main-btn-color);
@@ -690,6 +692,56 @@ img {
 .footer-link:hover, .footer-link:focus {
     color: var(--accent-color);
 }
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(2px);
+    transition: opacity 250ms linear, visibility 250ms linear;
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -70%);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    min-height: 580px;
+    background-color: var(--section-secondary-bcg-color);
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    transition: transform 300ms ease, opacity 300ms ease;
+}
+.modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    cursor: pointer;
+}
+.modal-icon {
+    fill: var(--text-color)
+}
 @keyframes top-to-bottom {
     0% {
     opacity: 0;
@@ -729,3 +781,26 @@ img {
     transform: translateX(0);
     }
 }
+@keyframes heartbeat {
+    from {
+      transform: scale(1);
+      transform-origin: center center;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      transform: scale(0.91);
+      animation-timing-function: ease-in;
+    }
+    17% {
+      transform: scale(0.98);
+      animation-timing-function: ease-out;
+    }
+    33% {
+      transform: scale(0.87);
+      animation-timing-function: ease-in;
+    }
+    45% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
