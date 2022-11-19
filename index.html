@@ -446,7 +446,7 @@
 										placeholder="John Dou"
 										required
 									/>
-									<span class="booking-label">Name*</span>
+									<span class="booking-label">Name</span>
 								</label>
 								<label class="booking-group-field">
 									<input
@@ -456,16 +456,18 @@
 										placeholder="+38 (067) 111-11-11"
 										required
 									/>
-									<span class="booking-label">Phone*</span>
+									<span class="booking-label">Phone</span>
 								</label>
 							</div>
-							<label class="booking-label">Message</label>
-							<textarea
-								class="booking-message"
-								name="user_message"
-								rows="5"
-								placeholder="Type your message"
-							></textarea>
+							<label class="booking-group">
+								<textarea
+									class="booking-message"
+									name="user_message"
+									rows="5"
+									placeholder="Type your message"
+								></textarea>
+								<span class="booking-label">Message</span>
+							</label>
 							<button class="button-price header-dark-btn button" type="submit">Send</button>
 						</form>
 					</section>
@@ -532,28 +534,28 @@
 						<use href="./img/sprite.svg#icon-close-cross"></use>
 					</svg>
 				</button>
-				<strong>Leave your data we will call you back</strong>
+				<strong class="modal-title">Leave your data we will call you back</strong>
 				<form class="modal-form" name="modal_form">
 					<div class="modal-form-group" role="group">
 						<label class="modal-form-label" for="user_name">Name</label>
 						<div class="modal-form-wrapper">
 							<input class="modal-form-field" type="text" name="user_name" id="user_name" />
 							<svg class="modal-form-icon" width="20px" height="20px">
-								<use href="./img/sprite.svg#"></use>
+								<use href="./img/sprite.svg#icon-modal-person"></use>
 							</svg>
 						</div>
 						<label class="modal-form-label" for="user_phone">Phone</label>
 						<div class="modal-form-wrapper">
 							<input class="modal-form-field" type="tel" name="user_phone" id="user_phone" />
 							<svg class="modal-form-icon" width="20px" height="20px">
-								<use href="./img/sprite.svg#"></use>
+								<use href="./img/sprite.svg#icon-modal-phone"></use>
 							</svg>
 						</div>
 						<label class="modal-form-label" for="user_mail">Email</label>
 						<div class="modal-form-wrapper">
 							<input class="modal-form-field" type="text" name="user_mail" id="user_mail" />
 							<svg class="modal-form-icon" width="20px" height="20px">
-								<use href="./img/sprite.svg#"></use>
+								<use href="./img/sprite.svg#icon-modal-mail"></use>
 							</svg>
 						</div>
 						<label class="modal-form-label" for="user_message">Comment</label>
@@ -564,19 +566,19 @@
 							rows="5"
 						></textarea>
 					</div>
-					<div class="modal-form-group" role="group">
+					<div class="modal-form-agreement" role="group">
 						<input
 							class="modal-form-checkbox"
 							type="checkbox"
 							name="user_agreement"
 							id="user_agreement"
 						/>
-						<label for="user_agreement">
-							I agree to receive emails and to
-							<a href="">Terms and Conditions</a>
+						<label class="modal-form-agreement-text" for="user_agreement">
+							I agree to receive emails and read
+							<a class="modal-form-agreement-link" href="">Terms and Conditions</a>
 						</label>
 					</div>
-					<button class="modal-form-btn header-dark-btn button" type="submit">Send</button>
+					<button class="modal-form-btn about-light-btn button" type="submit">Send</button>
 				</form>
 			</div>
 		</div>
