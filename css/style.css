@@ -187,6 +187,22 @@ img {
     display: flex;
     align-items: flex-end;
 }
+.hero-list {
+    transform: rotate(-90deg) translateY(40px);
+    transform-origin: left;
+}
+.media-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.media-list::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--secondary-title-color);
+}
 .hero-right-side {
     position: relative;
     flex-grow: 1;
@@ -198,6 +214,7 @@ img {
     background-size: cover;
 }
 .hero-link {
+    display: block;
     font-weight: 600;
     font-size: 11px;
     line-height: 1.365px;
