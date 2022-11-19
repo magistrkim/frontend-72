@@ -123,9 +123,7 @@
 							are a team that is always "on the same wave" with clients. Therefore, we are always
 							ready to improve everyone who comes to us
 						</p>
-						<button type="button" class="about-light-btn button">
-							Online-booking
-						</button>
+						<button type="button" class="about-light-btn button">Online-booking</button>
 					</div>
 				</div>
 			</section>
@@ -173,9 +171,7 @@
 							</li>
 						</ul>
 					</div>
-					<button type="button" class="button-price header-dark-btn button">
-						Online-booking
-					</button>
+					<button type="button" class="button-price header-dark-btn button">Online-booking</button>
 				</div>
 			</section>
 			<section class="benefits-section section">
@@ -440,6 +436,38 @@
 				<div class="container contacts-container">
 					<section class="booking-section section">
 						<h2 class="booking-title">Online-booking</h2>
+						<form name="booking_form" class="booking-form">
+							<div class="booking-group">
+								<label class="booking-group-field">
+									<input
+										class="booking-field"
+										type="text"
+										name="user_name"
+										placeholder="John Dou"
+										required
+									/>
+									<span class="booking-label">Name*</span>
+								</label>
+								<label class="booking-group-field">
+									<input
+										class="booking-field"
+										type="tel"
+										name="user_phone"
+										placeholder="+38 (067) 111-11-11"
+										required
+									/>
+									<span class="booking-label">Phone*</span>
+								</label>
+							</div>
+							<label class="booking-label">Message</label>
+							<textarea
+								class="booking-message"
+								name="user_message"
+								rows="5"
+								placeholder="Type your message"
+							></textarea>
+							<button class="button-price header-dark-btn button" type="submit">Send</button>
+						</form>
 					</section>
 					<section class="address-section section">
 						<div class="address-wrapper">
