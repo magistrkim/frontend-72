@@ -539,9 +539,21 @@
 					<div class="modal-form-group" role="group">
 						<label class="modal-form-label" for="user_name">Name</label>
 						<div class="modal-form-wrapper">
-							<input class="modal-form-field" type="text" name="user_name" id="user_name" />
+							<input
+								class="modal-form-field"
+								type="text"
+								name="user_name"
+								id="user_name"
+								minlength="5"
+								required
+								placeholder=" "
+							/>
 							<svg class="modal-form-icon" width="20px" height="20px">
 								<use href="./img/sprite.svg#icon-modal-person"></use>
+							</svg>
+							<svg class="modal-form-icon-attention" width="20px" height="20px">
+								<use class="warning" href="./img/sprite.svg#icon-notification"></use>
+								<use class="success" href="./img/sprite.svg#icon-checkmark"></use>
 							</svg>
 						</div>
 						<label class="modal-form-label" for="user_phone">Phone</label>

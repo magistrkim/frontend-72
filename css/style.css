@@ -880,6 +880,14 @@ img {
     outline-color: var(--accent-color);
     box-shadow: 0 0 0 4px  rgba(255, 108, 0, 0.35);
 }
+.modal-form-field:not(:placeholder-shown):invalid:required {
+    outline-color:  rgba(234, 5, 5);
+    box-shadow: 0 0 0 4px   rgba(234, 5, 5, 0.25);
+}
+.modal-form-field:not(:placeholder-shown):valid:required {
+    outline-color:  rgba(4, 171, 116);
+    box-shadow: 0 0 0 4px   rgba(4, 171, 116, 0.25);
+}
 .modal-form-icon {
     position: absolute;
     top: 50%;
@@ -889,6 +897,31 @@ img {
 }
 .modal-form-field:focus + .modal-form-icon {
     fill: rgba(255, 108, 0, 0.8);
+}
+.modal-form-icon-attention {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.warning,
+.success {
+    opacity: 0;
+    transition: 300ms ease-in-out;
+    transform: scale(0.3);
+    transform-origin: center;
+}
+.modal-form-field:not(:placeholder-shown):invalid:required ~ .modal-form-icon-attention .warning {
+    opacity: 1;
+    transform: scale(1);
+    fill: rgba(234, 5, 5);
+    transition-delay: 200ms;
+}
+.modal-form-field:not(:placeholder-shown):valid:required ~ .modal-form-icon-attention .success {
+    opacity: 1;
+    transform: scale(1);
+    fill: rgba(4, 171, 116);
+    transition-delay: 200ms;
 }
 .modal-form-message {
     display: block;
